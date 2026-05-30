@@ -1,0 +1,86 @@
+body{
+    background-color: rgb(4, 51, 81);
+    color: beige;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0; 
+    padding: 0; 
+}
+
+nav {
+    background-color: rgb(20, 77, 96);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: beige;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 42px;
+    font-weight: 800; 
+}
+
+h2 {
+    color: rgb(7, 77, 42);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(20, 77, 96);
+    border-radius: 8px;
+}
+
+#About { 
+    text-align: center;
+}
+
+
+#Experience ul{ 
+    padding: 0; 
+}
+
+#Experience li{
+    list-style: none;
+    background-color: rgb(83, 128, 251);
+    border-left: 5px solid rgb(20, 77, 96);
+    color: rgb(255, 255, 255);
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#Connect {
+    text-align: center;
+}
+
+#Connect ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+#Connect li{ 
+    list-style: none;
+}
+
+#Connect a {
+    background: rgb(83, 128, 251);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
