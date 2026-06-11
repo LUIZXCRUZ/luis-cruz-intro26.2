@@ -2,16 +2,27 @@
 <html>
 <head> 
     <title> Luis Cruz's Portfolio </title>
+    <link rel="stylesheet" href="css/index.css">
     <meta charset="UTF-8"/> 
     <meta name="description" content="Luis Cruz's Coding Portfolio"/>
     <meta name="author" content="Luis Cruz"/>
 </head>
 
 <body>
+
+    <nav>
+        <a href="#About">About</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Connect">Connect</a>
+        <a href="#leave-message">Leave a Message</a>
+    </nav>
+
     <h1>Luis Cruz</h1>
 
 <section id="About">
-    <h2 style="font-size: 22px; color:blue">About</h2>
+    <h2 style="font-size: 22px; color:lightskyblue">About</h2>
         <p> My name is Luis Cruz. I am 23 years old, 
             learning code with Code the Dream. I am currently 
             learning webDevelopment using HTML, GitHub, and Javascript. 
@@ -22,7 +33,7 @@
 </section>
 
 <section id="Experience">
-    <h2 style="font-size: 22px; color:blue"> Experience </h2>
+    <h2 style="font-size: 22px; color:lightskyblue"> Experience </h2>
     <ul>
         <li> B.S. Environment Studies (San Jose State University) </li>
         <li> Minor: Green Engineering (San Jose State University)</li>
@@ -31,12 +42,46 @@
     </ul>
 </section>
 
+ <section id="Skills">
+        <h2 style="font-size: 22px; color:lightskyblue">Skills</h2>
+        <ul></ul>
+    </section>
+
+    <section id="Projects">
+        <h2 style="font-size: 22px; color:lightskyblue">Projects</h2>
+        <ul></ul>
+    </section>
+
 <section id="Connect">
-    <h2 style="font-size: 22px; color:blue"> Connect </h2>
+    <h2 style="font-size: 22px; color: lightskyblue"> Connect </h2>
     <ul>
         <li><a href="https://github.com/LUIZXCRUZ">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/luisiguillencruz/">Linkedin</a></li>
     </ul>
 </section>
+
+<section id="leave-message">
+    <h2 style="font-size: 22px; color:lightskyblue"> Leave a Message </h2>
+
+    <form name="leave_message">
+        <label> Name: </label><br>
+        <input type="text" name="usersName" required><br><br>
+ 
+        <label> Email: </label><br>
+        <input type="email" name="usersEmail" required><br><br>
+
+        <label> Message: </label><br>
+        <textarea name="usersMessage" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<section id="messages"> 
+    <h2 style="font-size: 22px; color:lightskyblue"> Messages </h2>
+    <ul></ul>
+</section>
+
+<script src="js/index.js"></script>
 </body>
 </html>
