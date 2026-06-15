@@ -3,7 +3,7 @@ body{
     color: beige;
     font-family: 'Times New Roman', Times, serif;
     margin: 0; 
-    padding: 0; 
+    padding-top: 120px; 
 }
 
 nav {
@@ -21,11 +21,12 @@ nav a {
 }
 
 h1 {
+    color: beige;
     text-align: center;
     margin-top: 20px;
     font-size: 42px;
     font-weight: 800; 
-    color: rgb(246, 246, 195) 
+    
 }
 
 section h2 {
@@ -42,7 +43,7 @@ section {
 }
 
 #About { 
-    text-align: center;
+    flex: 3;
 }
 
 
@@ -225,8 +226,9 @@ section {
 
 #messages li {
     list-style: none;
-    background-color: rgb(83, 128, 251);
-    color: white;
+    background-color: transparent;
+    border: 2px solid rgb(83, 128, 251);
+    color: beige;
     padding: 15px;
     margin-bottom: 12px;
     border-radius: 8px;
@@ -245,9 +247,19 @@ footer {
 }
 
 @media (max-width: 600px)  {
-    #leave-message input 
+    #leave-message input, 
     #leave-message textarea {
         width: 95%;
+    }
+
+    nav{ 
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+
+    nav a {
+        margin: 5px 0; 
     }
 }
 
@@ -270,4 +282,43 @@ footer {
     padding: 10px 15px;
     border-radius: 8px; 
     font-weight: bold; 
+}
+
+.about-weather-container {
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    margin: 20px;
+}
+
+.about-weather-container #About {
+    flex:2; 
+    margin: 0; 
+}
+
+.weather-section {
+   flex: 0.5;
+   max-width:200px;
+
+   background-color: rgb(20, 77, 96);
+   padding: 20px;
+   border-radius: 8px;
+
+   color: beige;
+}
+
+.weather-section h3 { 
+    font-size: 16px;
+    margin-top:0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.weather-section p {
+    margin: 10px 0; 
+}
+
+#temperature {
+    font-weight: bold; 
+    color: beige; 
 }

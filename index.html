@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head> 
-    <title> Luis Cruz's Portfolio </title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Luis Cruz's Portfolio</title>
     <meta charset="UTF-8"/> 
     <meta name="description" content="Luis Cruz's Coding Portfolio"/>
     <meta name="author" content="Luis Cruz"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -19,18 +20,36 @@
         <a href="#leave-message">Leave a Message</a>
     </nav>
 
-    <h1>Luis Cruz</h1>
+<h1>Luis Cruz</h1>
 
-<section id="About">
-    <h2>About</h2>
-    <p>My name is Luis Cruz. I am 23 years old, 
-        learning code with Code the Dream. I am currently 
-        learning web development using HTML, CSS, GitHub, and Javascript. 
-        I am passionate about sustainability, green technology, and
-        renewable energy. I am hoping I can use AI, technology, and ML 
-        to solve complex environmental problems. 
-    </p>
-</section>
+<div class="about-weather-container">
+
+    <section id="About">
+        <h2>About</h2>
+        <p>My name is Luis Cruz. I am 23 years old, 
+            learning code with Code the Dream. I am currently 
+            learning web development using HTML, CSS, GitHub, and Javascript. 
+            I am passionate about sustainability, green technology, and
+            renewable energy. I am hoping I can use AI, technology, and ML 
+            to solve complex environmental problems. 
+        </p>
+    </section>
+
+    <div class="weather-section">
+        <h3> San Jose Weather</h3>
+
+        <p>
+            Temperature:
+            <span id="temperature">--°F</span> 
+        </p>
+        
+        <p>
+            Weather Condition:
+            <span id="weather-code">--</span>
+        </p>
+    </div>   
+
+</div>
 
 <section id="Experience">
     <h2>Experience</h2>
@@ -87,14 +106,14 @@
     <h2>Leave a Message</h2>
 
     <form name="leave_message">
-        <label>Name:</label><br>
-        <input type="text" name="usersName" required><br><br>
+        <label for="usersName">Name:</label><br>
+        <input type="text" name="usersName" id="usersName" required><br><br>
  
-        <label>Email:</label><br>
-        <input type="email" name="usersEmail" required><br><br>
+        <label for="usersEmail">Email:</label><br>
+        <input type="email" name="usersEmail" id="usersEmail" required><br><br>
 
-        <label>Message:</label><br>
-        <textarea name="usersMessage" required></textarea><br><br>
+        <label for="usersMessage">Message:</label><br>
+        <textarea name="usersMessage" id="usersMessage" required></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
