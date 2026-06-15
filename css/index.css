@@ -3,7 +3,7 @@ body{
     color: beige;
     font-family: 'Times New Roman', Times, serif;
     margin: 0; 
-    padding-top: 120px; 
+    padding: 0; 
 }
 
 nav {
@@ -11,6 +11,7 @@ nav {
     padding: 10px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -42,35 +43,51 @@ section {
     border-radius: 8px;
 }
 
-#About { 
-    flex: 3;
+#About,
+#Experience, 
+#Skills,
+#Projects,
+#Connect,
+#leave-message{
+    text-align: center;
 }
 
-
-#Experience ul{ 
+#Experience ul,
+#Skills ul,
+#Projects ul, 
+#Connect ul,
+#messages ul { 
     padding: 0; 
 }
 
-#Experience li{
+#Skills ul,
+#Experience ul,
+#Projects ul { 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#Experience li,
+#Skills li,
+#Projects li {
     list-style: none;
     background-color: rgb(83, 128, 251);
-    border-left: 5px solid rgb(20, 77, 96);
     color: rgb(255, 255, 255);
-    margin-bottom: 12px;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 8px;
     font-weight: bold;
 }
 
-#Connect {
-    text-align: center;
+#Experience li {
+    border-left: 5px solid rgb(20,77,96);
 }
 
 #Connect ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 0;
 }
 
 #Connect li{ 
@@ -85,116 +102,6 @@ section {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-}
-
-body{
-    background-color: rgb(4, 51, 81);
-    color: beige;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0; 
-    padding: 0; 
-}
-
-nav {
-    background-color: rgb(20, 77, 96);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-nav a {
-    color: beige;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 42px;
-    font-weight: 800; 
-}
-
-h2 {
-    color: rgb(7, 77, 42);
-    font-size: 28px;
-    font-weight: 700;
-}
-
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: rgb(20, 77, 96);
-    border-radius: 8px;
-}
-
-#About { 
-    text-align: center;
-}
-
-#Experience {
-    text-align: center;
-}
-
-#Experience ul{ 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0; 
-}
-
-#Experience li{
-    list-style: none;
-    background-color: rgb(83, 128, 251);
-    border-left: 5px solid rgb(20, 77, 96);
-    color: rgb(255, 255, 255);
-    margin-bottom: 12px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    width: fit-content
-}
-
-#Connect {
-    text-align: center;
-}
-
-#Connect ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-}
-
-#Skills {
-    text-align: center;
-}
-
-#Skills ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0;
-}
-
-#Skills li {
-    list-style: none;
-    background-color: rgb(83, 128, 251);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-#Projects ul {
-    padding: 0;
-}
-
-#leave-message {
-    text-align: center;
 }
 
 #leave-message input,
@@ -218,10 +125,6 @@ section {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
-}
-
-#messages ul {
-    padding: 0;
 }
 
 #messages li {
@@ -252,73 +155,13 @@ footer {
         width: 95%;
     }
 
-    nav{ 
+    nav { 
         flex-direction: column;
         align-items: center;
-        gap:10px;
+        gap: 10px;
     }
 
     nav a {
         margin: 5px 0; 
     }
-}
-
-#Projects {
-    text-align: center;
-}
-
-#Projects ul{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0; 
-}
-
-#Projects li{
-    list-style: none; 
-    background-color: rgb(83, 128, 251);
-    color: white; 
-    padding: 10px 15px;
-    border-radius: 8px; 
-    font-weight: bold; 
-}
-
-.about-weather-container {
-    display: flex;
-    gap: 20px;
-    align-items: center; 
-    margin: 20px;
-}
-
-.about-weather-container #About {
-    flex:2; 
-    margin: 0; 
-}
-
-.weather-section {
-   flex: 0.5;
-   max-width:200px;
-
-   background-color: rgb(20, 77, 96);
-   padding: 20px;
-   border-radius: 8px;
-
-   color: beige;
-}
-
-.weather-section h3 { 
-    font-size: 16px;
-    margin-top:0;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.weather-section p {
-    margin: 10px 0; 
-}
-
-#temperature {
-    font-weight: bold; 
-    color: beige; 
 }

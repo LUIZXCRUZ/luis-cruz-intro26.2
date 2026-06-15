@@ -73,7 +73,7 @@ fetch("https://api.github.com/users/luizxcruz/repos")
         const projectSection = document.querySelector("#Projects");
         const projectList = projectSection.querySelector("ul");
 
-        for (let i = 0; i <repositories.length; i++){
+        for (let i = 0; i < repositories.length; i++) {
             const project = document.createElement("li");
 
             project.innerText = repositories[i].name;
@@ -83,35 +83,14 @@ fetch("https://api.github.com/users/luizxcruz/repos")
     })
 
     .catch(function(error) {
-        console.log("Error fetching repositories: ", error); 
+        console.log("Error fetching repositories: ", error);
+
+        const projectSection = document.querySelector("#Projects");
+        const projectList = projectSection.querySelector("ul");
+        const errorMessage = document.createElement("li");
+
+        errorMessage.innerText = "Sorry, there was an error loading my Github projects.";
+
+        projectList.appendChild(errorMessage);
 });
 
-const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=37.3394&longitude=-121.895&hourly=temperature_2m,weather_code&current=temperature_2m,weather_code&temperature_unit=fahrenheit";
-fetch(weatherUrl)
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-
-        document.querySelector("#temperature").textContent = 
-            data.current.temperature_2m + "°F";
-
-        document.querySelector("#weather-code").textContent = 
-            getWeatherDescription(data.current.weather_code);
-    })
-    .catch((error) => {
-        console.log("Error fetching weather : ", error);
-});
-
-function getWeatherDescription(code) {
-    if (code === 0) {
-        return "Clear sky/Sunny";
-    } else if (code <= 3) {
-        return "Partly cloudy/sunny";
-    } else if (code <= 48) {
-        return "Cloudy/Foggy";
-    } else if (code <= 67) {
-        return "Rainy";
-    } else {
-        return "Other Weather";
-    }
-}
