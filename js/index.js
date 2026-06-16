@@ -5,7 +5,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 
 const copyright = document.createElement("p");
-copyright.innerHTML = `Luis Cruz &copy ${thisYear}`;
+copyright.innerHTML = `Luis Cruz &copy; ${thisYear}`;
 
 footer.appendChild(copyright); 
 
@@ -64,7 +64,11 @@ messageForm.addEventListener("submit", function(event) {
 });
 
 fetch("https://api.github.com/users/luizxcruz/repos")
-    .then(function(response){
+    .then(function(response) {
+        if (!response.ok){
+            throw new Error("Failed to fetch repositories");
+        }
+
         return response.json();
     })
     .then(function(repositories){
@@ -81,7 +85,6 @@ fetch("https://api.github.com/users/luizxcruz/repos")
             projectList.appendChild(project);
         }
     })
-
     .catch(function(error) {
         console.log("Error fetching repositories: ", error);
 
@@ -89,7 +92,7 @@ fetch("https://api.github.com/users/luizxcruz/repos")
         const projectList = projectSection.querySelector("ul");
         const errorMessage = document.createElement("li");
 
-        errorMessage.innerText = "Sorry, there was an error loading my Github projects.";
+        errorMessage.innerText = "Sorry, there was an error loading my GitHub projects.";
 
         projectList.appendChild(errorMessage);
 });

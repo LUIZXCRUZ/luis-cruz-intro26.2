@@ -16,7 +16,7 @@ function getWeatherDescription(code) {
 }
 
 temperatureButton.addEventListener("click", function() {
-    fetch("https://api.open-meteo.com/v1/forecast?latitude=37.3394&longitude=-121.895&hourly=temperature_2m,weather_code&current=temperature_2m,weather_code&temperature_unit=fahrenheit")
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=37.3394&longitude=-121.895&current=temperature_2m&temperature_unit=fahrenheit")
         .then(function(response) {
             return response.json();
         })
@@ -32,7 +32,7 @@ temperatureButton.addEventListener("click", function() {
 });
 
 conditionButton.addEventListener("click", function() {
-    fetch("https://api.open-meteo.com/v1/forecast?latitude=37.3394&longitude=-121.895&hourly=temperature_2m,weather_code&current=temperature_2m,weather_code&temperature_unit=fahrenheit")
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=37.3394&longitude=-121.895&current=weather_code")
         .then(function(response) {
             return response.json();
         })
