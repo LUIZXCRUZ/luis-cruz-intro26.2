@@ -1,61 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head> 
-    <title> Luis Cruz's Portfolio </title>
-    <meta charset="UTF-8"/> 
-    <meta name="description" content="Luis Cruz's Coding Portfolio"/>
-    <meta name="author" content="Luis Cruz"/>
-    <link href="css/index.css" rel="stylesheet">
+    <title>Luis Cruz's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Luis Cruz's Coding Portfolio">
+    <meta name="author" content="Luis Cruz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+
+    <nav>
+        <a href="#About">About</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Connect">Connect</a>
+        <a href="#leave-message">Leave a Message</a>
+        <a href="openapi.html">Open API Project</a>
+    </nav>
+
     <h1>Luis Cruz</h1>
 
-<nav>
-    <a href="#About">About</a>
-    <a href="#Experience">Experience</a>
-    <a href="#Skills">Skills</a>
-    <a href="#Projects">Projects</a>
-    <a href="#Connect">Connect</a>
-</nav>
 
-<section id="About">
-    <h2 style="font-size: 22px; color:rgb(83, 128, 251)">About</h2>
-        <p> My name is Luis Cruz. I am 23 years old, 
+    <section id="About">
+        <h2>About</h2>
+        <p>My name is Luis Cruz. I am 23 years old, 
             learning code with Code the Dream. I am currently 
-            learning webDevelopment using HTML, GitHub, and Javascript. 
+            learning web development using HTML, CSS, GitHub, and Javascript. 
             I am passionate about sustainability, green technology, and
             renewable energy. I am hoping I can use AI, technology, and ML 
             to solve complex environmental problems. 
         </p>
-</section>
+    </section>
 
-<section id="Experience">
-    <h2 style="font-size: 22px; color:rgb(83, 128, 251)"> Experience </h2>
-    <ul>
-        <li> B.S. Environment Studies (San Jose State University) </li>
-        <li> Minor: Green Engineering (San Jose State University)</li>
-        <li> Customer Service </li>
-        <li> Javascript Basics</li>
-    </ul>
-</section>
+    <section id="Experience">
+        <h2>Experience</h2>
+        <ul>
+            <li> 
+                <strong>B.S. Environmental Studies (San Jose State University)</strong><br> 
+                2020-2025 <br>
+                Studied sustainability, environmental science, and renewable energy.
+            </li>
 
-<section id="Skills">
-    <h2 style="font-size: 22px; color:rgb(83, 128, 251)"> Skills </h2>
-    <ul></ul>
-</section>
+            <li> 
+                <strong>Minor: Green Engineering (San Jose State University)</strong><br> 
+                2020-2025 <br> 
+                Learned principles of sustainable design, energy efficiency, and engineering solutions for environmental challenges.
+            </li>
 
-<section id="Projects">
-    <h2 style="font-size: 22px; color:rgb(83, 128, 251)"> Projects </h2>
-    <ul></ul>
-</section>
+            <li> 
+                <strong>Customer Service</strong><br> 
+                2018-2026<br>
+                Developed communication and teamwork skills in fast-paced environments.
+            </li>
 
-<section id="Connect">
-    <h2 style="font-size: 22px; color:rgb(83, 128, 251)"> Connect </h2>
-    <ul>
-        <li><a href="https://github.com/LUIZXCRUZ">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/luisiguillencruz/">Linkedin</a></li>
-    </ul>
-</section>
+            <li> 
+                <strong>Code the Dream - Web Development</strong><br> 
+                2026<br>
+                Building websites using HTML, CSS, JavaScript, and GitHub, while learning front-end web development basics.
+            </li>
+        </ul>
+    </section>
+
+    <section id="Skills">
+        <h2>Skills</h2>
+        <ul></ul>
+    </section>
+
+    <section id="Projects">
+        <h2>Projects</h2>
+        <ul></ul>
+    </section>
+
+    <section id="Connect">
+        <h2>Connect</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/LUIZXCRUZ">GitHub</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/luisiguillencruz/">LinkedIn</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="leave-message">
+        <h2>Leave a Message</h2>
+
+        <form name="leave_message">
+            <label for="usersName">Name:</label><br>
+            <input type="text" name="usersName" id="usersName" required><br><br>
+    
+            <label for="usersEmail">Email:</label><br>
+            <input type="email" name="usersEmail" id="usersEmail" required><br><br>
+
+            <label for="usersMessage">Message:</label><br>
+            <textarea name="usersMessage" id="usersMessage" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="messages"> 
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

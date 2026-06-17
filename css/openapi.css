@@ -1,0 +1,86 @@
+body{
+    background-color: rgb(4,51,81);
+    color: beige; 
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb (20,77,96);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: beige;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}   
+
+h1 {
+    color: beige;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 42px;
+    font-weight: 800; 
+}
+
+.weather-section {
+    background-color: rgb(20,77,96);
+    color: beige;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 500px;
+    text-align: center; 
+}
+
+.weather-section h2 {
+    color: beige;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.weather-section button{
+    background-color: rgb(83,128,251);
+    color: white;
+    border: none; 
+    padding: 12px 18px; 
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.weather-section p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#temperature, 
+#condition {
+    font-weight: bold; 
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    nav a {
+        margin: 5px 0; 
+    }
+
+    .weather-section {
+        margin: 15px;
+    }
+
+    .weather-section button{
+        width: 90%;
+    }
+}

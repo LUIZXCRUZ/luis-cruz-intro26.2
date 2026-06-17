@@ -11,6 +11,7 @@ nav {
     padding: 10px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -21,14 +22,16 @@ nav a {
 }
 
 h1 {
+    color: beige;
     text-align: center;
     margin-top: 20px;
     font-size: 42px;
     font-weight: 800; 
+    
 }
 
-h2 {
-    color: rgb(7, 77, 42);
+section h2 {
+    color: beige;
     font-size: 28px;
     font-weight: 700;
 }
@@ -40,35 +43,51 @@ section {
     border-radius: 8px;
 }
 
-#About { 
+#About,
+#Experience, 
+#Skills,
+#Projects,
+#Connect,
+#leave-message{
     text-align: center;
 }
 
-
-#Experience ul{ 
+#Experience ul,
+#Skills ul,
+#Projects ul, 
+#Connect ul,
+#messages ul { 
     padding: 0; 
 }
 
-#Experience li{
+#Skills ul,
+#Experience ul,
+#Projects ul { 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#Experience li,
+#Skills li,
+#Projects li {
     list-style: none;
     background-color: rgb(83, 128, 251);
-    border-left: 5px solid rgb(20, 77, 96);
     color: rgb(255, 255, 255);
-    margin-bottom: 12px;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 8px;
     font-weight: bold;
 }
 
-#Connect {
-    text-align: center;
+#Experience li {
+    border-left: 5px solid rgb(20,77,96);
 }
 
 #Connect ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 0;
 }
 
 #Connect li{ 
@@ -83,4 +102,66 @@ section {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+#leave-message input,
+#leave-message textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+
+#leave-message textarea {
+    height: 100px;
+}
+
+#leave-message button,
+#messages button {
+    background-color: rgb(83, 128, 251);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#messages li {
+    list-style: none;
+    background-color: transparent;
+    border: 2px solid rgb(83, 128, 251);
+    color: beige;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+#messages a {
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(20, 77, 96);
+}
+
+@media (max-width: 600px)  {
+    #leave-message input, 
+    #leave-message textarea {
+        width: 95%;
+    }
+
+    nav { 
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px 0; 
+    }
 }
