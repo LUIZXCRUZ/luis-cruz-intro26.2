@@ -18,6 +18,10 @@ function getWeatherDescription(code) {
 temperatureButton.addEventListener("click", function() {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=37.3394&longitude=-121.895&current=temperature_2m&temperature_unit=fahrenheit")
         .then(function(response) {
+            if(!response.ok){
+                throw new Error ("Failed to fetch temperature");
+            }
+
             return response.json();
         })
         .then(function(data) {
@@ -34,6 +38,10 @@ temperatureButton.addEventListener("click", function() {
 conditionButton.addEventListener("click", function() {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=37.3394&longitude=-121.895&current=weather_code")
         .then(function(response) {
+            if(!response.ok){
+                throw new Error ("Failed to fetch weather condition");
+            }
+
             return response.json();
         })
         .then(function(data) {

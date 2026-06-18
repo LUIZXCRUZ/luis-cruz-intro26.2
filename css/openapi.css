@@ -1,3 +1,5 @@
+/*Desktop First Design*/
+
 body{
     background-color: rgb(4,51,81);
     color: beige; 
@@ -64,6 +66,8 @@ h1 {
 #condition {
     font-weight: bold; 
 }
+
+/*Mobile Screen Style*/
 
 @media (max-width: 600px) {
     nav {
